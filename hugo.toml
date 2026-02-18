@@ -1,4 +1,4 @@
 baseURL = "/"
 languageCode = "zh-cn"
 title = "我的博客"
-theme = "stack"
+theme = "PaperMod"
