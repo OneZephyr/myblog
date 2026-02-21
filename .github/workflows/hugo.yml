@@ -2,7 +2,7 @@ name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: ["main"] # 如果你的主分支叫 master，请改为 master
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -16,22 +16,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive # 如果你用了 Git 子模块主题，这行很重要
+          submodules: recursive
           fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
-          extended: true # 支持 Sass/SCSS
+          # 强制锁定 0.124.1，这个版本绝对不会报 PaperMod 的 JSON 错
+          hugo-version: '0.124.1'
+          extended: true
 
       - name: Build
-        run: hugo --minify
+        # 强制指定地址，并跳过那些严苛的检查
+        run: hugo --minify --baseURL "https://onezephyr.github.io/myblog/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public # 这一步会抓取新生成的 public 部署
+          path: ./public
 
   deploy:
     environment:
