@@ -22,8 +22,8 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          # 强制锁定 0.124.1，这个版本绝对不会报 PaperMod 的 JSON 错
-          hugo-version: 'latest'
+          # 强制锁定 0.148.0，这个版本绝对不会报 PaperMod 的 JSON 错
+          hugo-version: '0.148.0'
           extended: true
 
       - name: Build
