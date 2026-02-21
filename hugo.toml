@@ -2,3 +2,22 @@ baseURL = "/"
 languageCode = "zh-cn"
 title = "我的博客"
 theme = "PaperMod"
+
+# 评论系统配置
+[params]
+  comments = true
+
+# Giscus评论系统配置
+[params.giscus]
+  enable = true
+  repo = "OneZephyr/myblog" # 您的GitHub用户名/仓库名
+  repoId = "" # 从Giscus官网获取
+  category = "Announcements" # Discussion分类
+  categoryId = "" # 从Giscus官网获取
+  mapping = "pathname" # 页面与discussion的映射关系
+  strict = "0" # 是否使用严格的标题匹配
+  reactionsEnabled = "1" # 是否启用反应
+  emitMetadata = "0" # 是否输出discussion的元数据
+  inputPosition = "bottom" # 评论框位置
+  theme = "preferred_color_scheme" # 主题
+  lang = "zh-CN" # 语言
