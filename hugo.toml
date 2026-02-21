@@ -1,19 +1,47 @@
-baseURL = "/"
+baseURL = "https://myblog.181861.xyz/"
 languageCode = "zh-cn"
 title = "我的博客"
 theme = "PaperMod"
 
-# 评论系统配置
+# SEO配置
 [params]
   comments = true
+  description = "个人技术博客，分享编程、前端开发、后端技术等相关内容"
+  keywords = ["技术博客", "编程", "前端开发", "后端技术", "Hugo"]
+  author = "OneZephyr"
+
+# 社交媒体配置
+[params.social]
+  github = "OneZephyr"
+  twitter = "OneZephyr"
+  linkedin = "OneZephyr"
+
+# 网站验证
+[params.analytics]
+  [params.analytics.google]
+    SiteVerificationTag = ""
+
+# 图片处理配置
+[imaging]
+  quality = 85
+  resampleFilter = "CatmullRom"
+  anchor = "smart"
+  hugoPx = false
+
+# 资源处理配置
+[resources]
+  [resources.css]
+    minify = true
+  [resources.js]
+    minify = true
 
 # Giscus评论系统配置
 [params.giscus]
   enable = true
   repo = "OneZephyr/myblog" # 您的GitHub用户名/仓库名
-  repoId = "" # 从Giscus官网获取
+  repoId = "R_kgDOGqZ6cw" # 从Giscus官网获取
   category = "Announcements" # Discussion分类
-  categoryId = "" # 从Giscus官网获取
+  categoryId = "DIC_kwDOGqZ6c84CS3fO" # 从Giscus官网获取
   mapping = "pathname" # 页面与discussion的映射关系
   strict = "0" # 是否使用严格的标题匹配
   reactionsEnabled = "1" # 是否启用反应
