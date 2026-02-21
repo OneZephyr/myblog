@@ -27,8 +27,7 @@ jobs:
           extended: true
 
       - name: Build
-        # 强制指定地址，并跳过那些严苛的检查
-        run: hugo --minify --baseURL "https://onezephyr.github.io/myblog/"
+        run: hugo --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -1,4 +1,4 @@
-baseURL = "https://myblog.181861.xyz/"
+baseURL = "/"
 languageCode = "zh-cn"
 title = "我的博客"
 theme = "PaperMod"
